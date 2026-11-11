@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke on all browsers" verbose="1">
+  <listeners>
+    <listener class-name="com.aiden.maiukha.listeners.TestListener"/>
+  </listeners>
+
+  <test name="Smoke - Chromium">
+    <parameter name="browser" value="chromium"/>
+    <classes><class name="com.aiden.maiukha.tests.SmokeTests"/></classes>
+  </test>
+  <test name="Smoke - Firefox">
+    <parameter name="browser" value="firefox"/>
+    <classes><class name="com.aiden.maiukha.tests.SmokeTests"/></classes>
+  </test>
+  <test name="Smoke - WebKit (Safari engine)">
+    <parameter name="browser" value="webkit"/>
+    <classes><class name="com.aiden.maiukha.tests.SmokeTests"/></classes>
+  </test>
+</suite>
